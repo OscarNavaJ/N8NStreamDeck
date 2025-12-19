@@ -64,9 +64,7 @@ Monitor the success or failure of your last workflow run.
 ---
 
 ## 🔧 Troubleshooting
-*   **404 Error on Trigger Workflow**: This usually means your n8n version is older than **v1.63.0**. Use the **Trigger Webhook** action instead.
 *   **Connection Error**: Ensure your **Base URL** includes `http://` or `https://` and that your **API Key** is valid.
-*   **Permissions**: If the plugin doesn't run on macOS, ensure you ran `./install.sh` which handles the necessary permissions and ad-hoc signing.
 
 ---
 
