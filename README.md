@@ -10,15 +10,6 @@ Control your n8n workflows directly from your Elgato Stream Deck. This plugin al
 2.  Stream Deck will automatically install it and prompt you to confirm.
 3.  **Configure**: Click any n8n action in Stream Deck to set up your URL and API Key.
 
----
-
-### For Developers
-This is an **Open Source** project. You can find the full TypeScript source code in the `src/` folder.
-1.  **Modify**: Edit the `.ts` files as needed.
-2.  **Build**: Run `./install.sh` in the development folder to rebuild, install, and regenerate the distribution package.
-
-*   **Base URL**: The full URL of your n8n instance (e.g., `https://n8n.yourdomain.com`).
-*   **API Key**: Your n8n Public API key.
 
 ---
 
