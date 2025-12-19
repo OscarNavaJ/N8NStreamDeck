@@ -1,0 +1,68 @@
+/* Basic Stream Deck PI styles */
+body {
+    background-color: #2D2D2D;
+    color: #909090;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+}
+
+.sdpi-wrapper {
+    padding: 10px;
+}
+
+.sdpi-heading {
+    color: #5D5D5D;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.sdpi-item {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    min-height: 30px;
+}
+
+.sdpi-item-label {
+    width: 80px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: normal;
+}
+
+.sdpi-item-value {
+    flex: 1;
+    min-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 4px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    background-color: #3D3D3D;
+    border: 1px solid #3D3D3D;
+    color: #E0E0E0;
+    border-radius: 3px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3fa9f5;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.select {
+    height: 25px;
+}

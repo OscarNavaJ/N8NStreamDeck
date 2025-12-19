@@ -1,0 +1,17 @@
+{
+    "name": "com.oscarnava.n8n",
+    "version": "1.0.0",
+    "description": "Stream Deck plugin for n8n",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w"
+    },
+    "dependencies": {
+        "@elgato/streamdeck": "^1.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0"
+    }
+}

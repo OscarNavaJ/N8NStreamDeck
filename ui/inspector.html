@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>n8n Property Inspector</title>
+    <link rel="stylesheet" href="inspector.css">
+</head>
+
+<body>
+    <div class="sdpi-wrapper">
+        <!-- Global Settings Section -->
+        <div class="sdpi-heading">N8N CONFIGURATION</div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Base URL</div>
+            <input class="sdpi-item-value" type="text" id="baseUrl" placeholder="https://n8n.example.com"
+                onchange="updateGlobal()">
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">API Key</div>
+            <input class="sdpi-item-value" type="password" id="apiKey" placeholder="X-N8N-API-KEY"
+                onchange="updateGlobal()">
+        </div>
+
+        <div class="sdpi-heading">ACTION SETTINGS</div>
+
+        <!-- Section for Trigger Workflow -->
+        <div id="workflowSettings" style="display:none;">
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Workflow ID</div>
+                <input class="sdpi-item-value" type="text" id="workflowId" placeholder="ID from URL"
+                    onchange="updateAction()">
+            </div>
+        </div>
+
+        <!-- Section for Trigger Webhook -->
+        <div id="webhookSettings" style="display:none;">
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Webhook URL</div>
+                <input class="sdpi-item-value" type="text" id="webhookUrl" placeholder="Full Webhook URL"
+                    onchange="updateAction()">
+            </div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Method</div>
+                <select class="sdpi-item-value select" id="method" onchange="updateAction()">
+                    <option value="POST">POST</option>
+                    <option value="GET" selected>GET</option>
+                </select>
+            </div>
+            <div class="sdpi-item" id="bodyGroup">
+                <div class="sdpi-item-label">Body (JSON)</div>
+                <textarea class="sdpi-item-value" id="body" rows="4" placeholder="{ 'test': true }"
+                    onchange="updateAction()"></textarea>
+            </div>
+
+            <div class="sdpi-heading">AUTHENTICATION</div>
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Auth Type</div>
+                <select class="sdpi-item-value select" id="authType" onchange="updateAction()">
+                    <option value="none" selected>None</option>
+                    <option value="basic">Basic Auth</option>
+                    <option value="header">Header Auth</option>
+                    <option value="jwt">JWT Auth</option>
+                </select>
+            </div>
+
+            <!-- Basic Auth -->
+            <div id="basicAuthSettings" style="display:none;">
+                <div class="sdpi-item">
+                    <div class="sdpi-item-label">User</div>
+                    <input class="sdpi-item-value" type="text" id="authUsername" placeholder="Username"
+                        onchange="updateAction()">
+                </div>
+                <div class="sdpi-item">
+                    <div class="sdpi-item-label">Pass</div>
+                    <input class="sdpi-item-value" type="password" id="authPassword" placeholder="Password"
+                        onchange="updateAction()">
+                </div>
+            </div>
+
+            <!-- Header Auth -->
+            <div id="headerAuthSettings" style="display:none;">
+                <div class="sdpi-item">
+                    <div class="sdpi-item-label">Header</div>
+                    <input class="sdpi-item-value" type="text" id="authHeaderName" placeholder="X-API-Key"
+                        onchange="updateAction()">
+                </div>
+                <div class="sdpi-item">
+                    <div class="sdpi-item-label">Value</div>
+                    <input class="sdpi-item-value" type="text" id="authHeaderValue" placeholder="value"
+                        onchange="updateAction()">
+                </div>
+            </div>
+
+            <!-- JWT Auth -->
+            <div id="jwtAuthSettings" style="display:none;">
+                <div class="sdpi-item">
+                    <div class="sdpi-item-label">Token</div>
+                    <input class="sdpi-item-value" type="text" id="authJwtToken" placeholder="eyJhbG..."
+                        onchange="updateAction()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="inspector.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+{
+    "Name": "n8n",
+    "Description": "Trigger n8n workflows and webhooks",
+    "Author": "oscarnava",
+    "Icon": "images/pluginIcon",
+    "Version": "1.0.7",
+    "SDKVersion": 2,
+    "Software": {
+        "MinimumVersion": "6.5"
+    },
+    "OS": [
+        {
+            "Platform": "mac",
+            "MinimumVersion": "11.0"
+        },
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ],
+    "UUID": "com.oscarnava.n8n",
+    "CodePath": "run-plugin.sh",
+    "CodePathMac": "run-plugin.sh",
+    "CodePathWin": "run-plugin.bat",
+    "Actions": [
+        {
+            "UUID": "com.oscarnava.n8n.activate",
+            "Name": "Activate Workflow",
+            "PropertyInspectorPath": "ui/inspector.html",
+            "Tooltip": "Activate an n8n workflow by ID",
+            "Icon": "images/activate",
+            "States": [
+                {
+                    "Image": "images/activate",
+                    "TitleAlignment": "middle",
+                    "FontSize": 16
+                }
+            ]
+        },
+        {
+            "UUID": "com.oscarnava.n8n.deactivate",
+            "Name": "Deactivate Workflow",
+            "PropertyInspectorPath": "ui/inspector.html",
+            "Tooltip": "Deactivate an n8n workflow by ID",
+            "Icon": "images/deactivate",
+            "States": [
+                {
+                    "Image": "images/deactivate",
+                    "TitleAlignment": "middle",
+                    "FontSize": 16
+                }
+            ]
+        },
+        {
+            "UUID": "com.oscarnava.n8n.webhook",
+            "Name": "Trigger Webhook",
+            "PropertyInspectorPath": "ui/inspector.html",
+            "Tooltip": "Call an n8n webhook",
+            "Icon": "images/webhook",
+            "States": [
+                {
+                    "Image": "images/webhook",
+                    "TitleAlignment": "middle",
+                    "FontSize": 16
+                }
+            ]
+        },
+        {
+            "UUID": "com.oscarnava.n8n.status",
+            "Name": "Execution Status",
+            "PropertyInspectorPath": "ui/inspector.html",
+            "Tooltip": "Show status of last execution",
+            "Icon": "images/status",
+            "States": [
+                {
+                    "Image": "images/status",
+                    "TitleAlignment": "middle",
+                    "FontSize": 16
+                }
+            ]
+        }
+    ],
+    "Category": "n8n",
+    "CategoryIcon": "images/categoryIcon"
+}

@@ -1,0 +1,12 @@
+<svg width="144" height="144" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="webhookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00CED1;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="144" height="144" rx="28" fill="url(#webhookGrad)"/>
+    <path d="M40 72 L60 92 L104 48" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 72 L60 92 L104 48" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+    <circle cx="72" cy="72" r="40" stroke="white" stroke-width="8" fill="none" />
+</svg>
